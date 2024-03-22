@@ -1,0 +1,31 @@
+.Navbar{
+    height: 10vh;
+    width: 99%;
+    color: #fff;
+    // border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    background-color: #088178; 
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;   
+    .logo{
+        height: 10vh;
+        width: 30%;
+        padding-top: 15px;
+        padding-left: 15px;
+    }
+    .icons{
+        display: flex;
+        gap: 1rem;
+        padding-right: 15px;
+
+    }
+    img{
+        height: 3rem;
+    }
+}
+    

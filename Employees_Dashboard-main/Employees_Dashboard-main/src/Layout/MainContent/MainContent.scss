@@ -1,0 +1,244 @@
+.maincontent{
+    height: 85vh;
+    width: 97%;
+    // border: 1px solid greenyellow;
+    margin: auto;
+.header{
+    height: 5vh;
+    width: 97%;
+    margin: 14px;
+    border: 2px solid black;
+    padding: 5px;
+}
+.main{
+    width: 97%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+.attendance{
+    width: 20%;
+    height: 100%;
+    // border: 2px solid violet;
+    // background-color: green;
+    button{
+        height: 3rem;
+        width: 80%;
+        margin-top: 1rem;
+        margin-left: 1.8rem;
+        background-color: rgba(44, 197, 44, 0.584);
+        border-radius: 10px;
+        outline-style: none;
+        border: none;
+    }
+    .profile{
+        margin-top: 7px;
+        height: 60%;
+        width: 100%;
+        // background-color: blue;
+        .photo{
+            height: 70%;
+            width: 100%;
+            .profile{
+                height: 60%;
+                width: 100%;
+                .photo{
+                    height: 50%;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .details{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 10px;
+                }
+            }            // background-color: blue;
+            img{
+                height: 79%;
+                width: 70%;
+                border-radius: 50%;
+                margin-top: 1.8rem;
+                margin-left: 2rem;
+                .profile{
+            height: 60%;
+            width: 100%;
+            .photo{
+                height: 40%;
+                width: 100%;
+                img{
+                    height: 150px;
+                    width: 150px;
+                }
+            }
+            .details{
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+        }
+            }
+            // background-color: aquamarine;
+        }
+        .details{
+            display: flex;
+            justify-content: space-around; 
+            align-items: baseline; 
+            gap: 10px;
+            .fetched{
+                gap: 5px;
+                margin-top: 3px;
+                color: gray;
+            }
+        }
+        
+    }
+    
+    .working{
+        width: 100%;
+        height: 40%;
+        // border: 1px solid yellow;
+        display: flex;
+        flex-direction: column;
+        .clock{
+            height: 100%;
+            width: 100%;
+            // border: 2px solid tomato;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e1e9eb;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);     
+            // background-image: url(../../assets//clock.jpeg);
+        }
+       
+        
+    }
+}
+.finance{
+    width: 77%;
+    height: 100%;
+    // border: 2px solid indigo;
+    padding: 15px;
+    .attendee{
+        height: 25%;
+        width: 100%;
+        border: 2px solid rgba(19, 19, 19, 0.365); 
+        margin-bottom: 2rem;
+        .head{
+            margin: 1rem;
+        }
+        .days{
+            display: flex;
+            justify-content: space-between;
+            margin:  1rem;
+        }
+        .Days-absent{
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem;
+        }
+        .leave{
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem;
+        }
+    } 
+    .stats{
+        height: 25%;
+        width: 100%;
+        border: 2px solid rgba(19, 19, 19, 0.365); 
+        margin-bottom: 2rem;
+        /* Add this CSS to your existing stylesheet */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+    }
+    .payroll{
+        height: 30%;
+        width: 100%;
+        border: 2px solid rgba(19, 19, 19, 0.365); 
+        border-bottom: none;
+        .body{
+            display: flex;
+            .gross{
+                flex: 1;
+                // border: 1px solid;
+                height: 147px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; 
+                .overtime{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 1rem;
+                }
+                .rate{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 1rem;
+                }
+                .sum{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 15px;
+                    border: 2px solid rgba(19, 19, 19, 0.365); 
+                    // background-color: violet;
+                }
+                       }
+            .advance{
+                flex: 1;
+                border: 2px solid rgba(19, 19, 19, 0.365); 
+                border-bottom: none;
+                height: 147px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; 
+                .overtime{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 1rem;
+                }
+                .rate{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 1rem;
+                }
+                .sum{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 15px;
+                    border: 2px solid rgba(19, 19, 19, 0.365); 
+                    // color: #fff;
+                    // background-color: rgba(0, 0, 0, 0.365);
+                }
+            }
+        }
+    }
+}
+}
+}
