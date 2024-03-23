@@ -1,13 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { setupListeners } from '@reduxjs/toolkit/query/react';
-import { attendanceApi } from '../Features/attendanceApi';
+import { timeApi } from '../Features/attendanceApi.js';
 
 export const store = configureStore({
   reducer: {
-    [attendanceApi.reducerPath]: attendanceApi.reducer
+    [timeApi.reducerPath]: timeApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(attendanceApi.middleware)
+    getDefaultMiddleware().concat(timeApi.middleware),
 });
-
-setupListeners(store.dispatch);

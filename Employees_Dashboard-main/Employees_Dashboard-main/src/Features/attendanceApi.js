@@ -1,36 +1,34 @@
+// timeApi.js
+
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-export const attendanceApi = createApi({
-    reducerPath: 'attendanceApi',
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000/api/attendance/' }),
-    tagTypes: ['attendance'],
+export const timeApi = createApi({
+  reducerPath: 'timeApi',
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000/api/time/' }),
+  tagTypes: ['time'],
 
-    endpoints: (builder) => ({
-        createTimeRecord: builder.mutation({
-            query: ({ EmployeeID, ClockInTime, ClockOutTime, Rate }) => ({
-                url: 'createTime',
-                method: 'POST',
-                body: { EmployeeID, ClockInTime, ClockOutTime, Rate },
-            }),
-            invalidatesTags: ['attendance'],
-        }),
-        updateTimeRecord: builder.mutation({
-            query: ({ EmployeeID, ClockInTime, ClockOutTime, Rate }) => ({
-                url: 'updateTime',
-                method: 'POST',
-                body: { EmployeeID, ClockInTime, ClockOutTime, Rate },
-            }),
-            invalidatesTags: ['attendance'],
-        }),
-        getTimeByEmployeeID: builder.query({
-            query: (employeeID) => `getTimeByEmployeeID/${employeeID}`,
-            providesTags: ['attendance'],
-        }),
-        getAllTimeRecords: builder.query({
-            query: () => 'getTime',
-            providesTags: ['attendance'],
-        }),
+  endpoints: (builder) => ({
+    createTimeRecord: builder.mutation({
+      query: (recordData) => ({
+        url: 'createTime',
+        method: 'POST',
+        body: recordData,
+      }),
+      invalidatesTags: ['time'],
     }),
+    updateTimeRecord: builder.mutation({
+      query: (recordData) => ({
+        url: 'updateTime',
+        method: 'POST',
+        body: recordData,
+      }),
+      invalidatesTags: ['time'],
+    }),
+    getTimeByEmployeeID: builder.query({
+      query: (employeeID) => `getTimeByEmployeeID/${employeeID}`,
+      providesTags: ['time'],
+    }),
+  }),
 });
 
-export const { useCreateTimeRecordMutation, useUpdateTimeRecordMutation, useGetTimeByEmployeeIDQuery, useGetAllTimeRecordsQuery } = attendanceApi;
+export const { useCreateTimeRecordMutation, useUpdateTimeRecordMutation, useGetTimeByEmployeeIDQuery } = timeApi;

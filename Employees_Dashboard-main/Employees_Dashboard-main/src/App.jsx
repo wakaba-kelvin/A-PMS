@@ -8,8 +8,7 @@ function App() {
   return (
   <div className="app">
     <Navbar/>
-    <MainContent/>
-  </div>
+    <MainContent userId="3fe87985-e362-4ba5-8e83-b0785bc61d4e" />  </div>
       
     
   )
