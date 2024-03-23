@@ -8,6 +8,7 @@ import timeRouter from './src/Routes/timeRouter.js';
 import payrollRouter from './src/Routes/parollRoutes.js';
 import advanceRouter from './src/Routes/adavanceRoutes.js';
 import scheduleRouter from './src/Routes/scheduleRoutes.js';
+import attendanceRouter from './src/Routes/attendanceRoutes.js';
 
 const app = express();
 dotenv.config();
@@ -33,7 +34,8 @@ app.use('/api', employeeRouter);
 app.use('/api', timeRouter);
 app.use('/api', payrollRouter);
 app.use('/api', advanceRouter);
-app.use('/api', scheduleRouter)
+app.use('/api', scheduleRouter);
+app.use('/api', attendanceRouter)
 
 // Start the server
 app.listen(port, () => {

@@ -130,3 +130,23 @@ Content-Type: application/json
     "OnLeave": 1,
     "LeaveDays": 30
 }
+
+
+####-------ATTENDANCE-------
+
+### - ADD ATTENDANCE RECORD
+POST http://localhost:3000/api/attendance
+Content-Type: application/json
+
+{
+    "AttendanceID": "your_attendance2_id",
+    "EmployeeID": "3fe87985-e362-4ba5-8e83-b0785bc61d4e",
+    "ClockInTime": "0800",
+    "ClockOutTime": "1700"
+}
+
+### - GET ALL ATTENDANCE RECORDS
+GET http://localhost:3000/api/attendance
+
+### - GET ATTENDANCE RECORDS BY EMPLOYEE ID
+GET http://localhost:3000/api/attendance/3fe87985-e362-4ba5-8e83-b0785bc61d4e

@@ -7,6 +7,28 @@ import { v4 as uuidv4 } from 'uuid';
 const JWT_SECRET_KEY = process.env.SECRET_KEY || "secret";
 
 
+
+// export const loginEmployeeService = async (email, password) => {
+//     try {
+//         const result = await poolRequest()
+//             .input('Email', sql.VarChar, email)
+//             .query("SELECT * FROM Employees WHERE Email = @Email");
+
+//         const user = result.recordset[0];
+        
+//         if (!user || !(await bcrypt.compare(password, user.Password))) {
+//             throw new Error('Invalid Email or Password');
+//         }
+
+//         const token = jwt.sign({ userId: user.EmployeeID }, JWT_SECRET_KEY, { expiresIn: '12h' });
+
+//         return { user, token };
+//     } catch (error) {
+//         console.error("Login failed", error);
+//         throw error;
+//     }
+// };
+
 export const loginEmployeeService = async (Email, Password) => {
     try {
         const result = await poolRequest()

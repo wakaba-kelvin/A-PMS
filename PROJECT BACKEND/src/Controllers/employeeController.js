@@ -1,3 +1,4 @@
+
 import { employeeLoginValidator, employeeValidator } from '../Validator/employeeValidator.js'
 import { hashPassword, sendServerError, sendCreated, sendDeleteSuccess, sendNotFound } from '../Helper/helper.js';
 import { response } from 'express';
@@ -143,5 +144,3 @@ export const updateEmployee = async (req, res) => {
         return res.status(500).json({ error: 'Internal server error' });
     }
 };
-
-
