@@ -129,14 +129,24 @@ export const addEmployeeService = async (employee) => {
 };
 
 
-export const getAllEmployeesService = async (users) => {
+export const getAllEmployeesService = async () => {
     try {
-        const allUsers = await poolRequest().query(`SELECT * FROM Employees`)
-        return allUsers
+        const allEmployees = await poolRequest().query(`SELECT EmployeeID, FirstName, LastName, Position, Schedule, CheckInTime, CheckOutTime FROM Employees`);
+        return allEmployees.recordset;
     } catch (error) {
-        return error
+        console.error("Error fetching all employees:", error);
+        throw error;
     }
-}
+};
+
+// export const getAllEmployeesService = async (users) => {
+//     try {
+//         const allUsers = await poolRequest().query(`SELECT * FROM Employees`)
+//         return allUsers
+//     } catch (error) {
+//         return error
+//     }
+// }
 
 
 export const getEmployeeByIdService = async (id) => {

@@ -3,33 +3,33 @@ POST http://localhost:3000/api/employee/register
 Content-Type: application/json
 
 {
-    "FirstName": "kelvin",
-    "LastName": "kimani",
-    "Email": "kimaniii@gmail.com",
+    "FirstName": "Sam",
+    "LastName": "Nderitu",
+    "Email": "Sammy@gmail.com",
     "Password": "12345678",
-    "Address": "678 Cherry Street",
-    "BirthDate": "1994-03-20",
-    "ContactInfo": "9871234560",
+    "Address": "32 Nyahururu",
+    "BirthDate": "2008-03-20",
+    "ContactInfo": "0716370463",
     "Gender": "Male",
-    "Position": "HR Coordinator",
+    "Position": "CEO",
     "PhotoURL": "https://example.com/olivia.jpg",
     "HourlyRate": 49.00,
-    "GrossPay": 245,
+    "GrossPay": 245000,
     "NHIFDeduction": 15.00,
     "NSSFDeduction": 21.00,
     "HELBDeduction": 12.00,
-    "Role": "Employee",
+    "Role": "Admin",
     "ClockInTime": "08:00",
     "ClockOutTime": "17:25"
 }
 
 
 #### - UPDATE EMPLOYEE
-PUT http://localhost:3000/api/employee/9e3d21b5-7678-4628-aa29-f39c01614e1e
+PUT http://localhost:3000/api/employee/83636c18-d8ba-416c-acc6-e9ac4c41ad79
 Content-Type: application/json
 
 {
-    "Role": "ADMIN"
+    "Position": "netwotk"
 }
 
 #### - login 
@@ -37,7 +37,7 @@ POST http://localhost:3000/api/employee/login
 Content-Type: application/json
 
 {
-    "Email": "kimaniii@gmail.com",
+    "Email": "kwakaba06@gmail.com",
     "Password": "12345678"
 }
 
@@ -53,16 +53,7 @@ DELETE  http://localhost:3000/api/employee/9d73aaf6-bb7f-4f5b-8fcc-12deb3c8a0c9
 ##########################################################################################################
 ### - TIME
 
-### Create time
-POST http://localhost:3000/api/createTime
-Content-Type: application/json
 
-{
-    "EmployeeID": "5f7a2d4f-a4e9-4c7b-beac-774cd2cd9204",
-    "ClockInTime": "08:30",
-    "ClockOutTime": "22:30",
-    "Rate": 10
-}
 
 ### - get ALL TIMES
 GET http://localhost:3000/api/getTime
@@ -139,7 +130,7 @@ POST http://localhost:3000/api/attendance
 Content-Type: application/json
 
 {
-    "AttendanceID": "your_attendance2_id",
+    # "AttendanceID": "",
     "EmployeeID": "3fe87985-e362-4ba5-8e83-b0785bc61d4e",
     "ClockInTime": "0800",
     "ClockOutTime": "1700"

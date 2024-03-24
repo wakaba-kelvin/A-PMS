@@ -101,27 +101,15 @@ export const getEmployeeById = async (req, res) =>{
 
 
 ///////////////////////////
+
 export const updateEmployee = async (req, res) => {
     const { id } = req.params;
     const employeeData = {
         FirstName: req.body.FirstName,
         LastName: req.body.LastName,
-        Email: req.body.Email,
-        Password: req.body.Password,
-        Address: req.body.Address,
-        BirthDate: req.body.BirthDate,
-        ContactInfo: req.body.ContactInfo,
-        Gender: req.body.Gender,
-        Position: req.body.Position,
-        PhotoURL: req.body.PhotoURL,
-        HourlyRate: req.body.HourlyRate,
-        GrossPay: req.body.GrossPay,
-        NHIFDeduction: req.body.NHIFDeduction,
-        NSSFDeduction: req.body.NSSFDeduction,
-        HELBDeduction: req.body.HELBDeduction,
-        Role: req.body.Role,
         ClockInTime: req.body.ClockInTime,
-        ClockOutTime: req.body.ClockOutTime
+        ClockOutTime: req.body.ClockOutTime,
+        Position: req.body.Position
     };
 
     try {
@@ -144,3 +132,50 @@ export const updateEmployee = async (req, res) => {
         return res.status(500).json({ error: 'Internal server error' });
     }
 };
+
+
+
+
+// export const updateEmployee = async (req, res) => {
+//     const { id } = req.params;
+//     const employeeData = {
+//         FirstName: req.body.FirstName,
+//         LastName: req.body.LastName,
+//         Email: req.body.Email,
+//         Password: req.body.Password,
+//         Address: req.body.Address,
+//         BirthDate: req.body.BirthDate,
+//         ContactInfo: req.body.ContactInfo,
+//         Gender: req.body.Gender,
+//         Position: req.body.Position,
+//         PhotoURL: req.body.PhotoURL,
+//         HourlyRate: req.body.HourlyRate,
+//         GrossPay: req.body.GrossPay,
+//         NHIFDeduction: req.body.NHIFDeduction,
+//         NSSFDeduction: req.body.NSSFDeduction,
+//         HELBDeduction: req.body.HELBDeduction,
+//         Role: req.body.Role,
+//         ClockInTime: req.body.ClockInTime,
+//         ClockOutTime: req.body.ClockOutTime
+//     };
+
+//     try {
+//         console.log("Request Body Data:", employeeData);
+//         const response = await updateEmployeeService(id, employeeData);
+//         console.log("Service Response:", response);
+
+//         if (response instanceof Error) {
+//             // Handle errors
+//             return res.status(500).json({ error: response.message });
+//         } else {
+//             // Retrieve the updated employee details from the database
+//             const updatedEmployee = await getEmployeeByIdService(id);
+//             // Send the updated employee details in the response
+//             return res.status(200).json(updatedEmployee);
+//         }
+//     } catch (error) {
+//         // Handle unexpected errors
+//         console.error("Controller Error:", error);
+//         return res.status(500).json({ error: 'Internal server error' });
+//     }
+// };
